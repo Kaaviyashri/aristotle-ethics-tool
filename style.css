@@ -103,14 +103,14 @@ nav .active {
   color: #dfeef0;
 }
 
-/* SMALL BANNER FOR OTHER PAGES */
+/* SMALL BANNER FOR OTHER PAGES - FIXED MARGIN */
 .small-banner {
   position: relative;
   width: 100%;
   height: 40vh;
   min-height: 300px;
   overflow: hidden;
-  margin-top: 0;
+  margin-top: 80px; /* Added margin to prevent navbar overlap */
 }
 
 .small-banner-img {
@@ -279,17 +279,16 @@ nav .active {
   width: 0%;
 }
 
-/* QUESTION CARD */
+/* QUESTION CARD - FIXED FOR MOBILE */
 #question-section {
   background: rgba(255,255,255,0.03);
-  padding: 3rem;
+  padding: 2rem 1.5rem;
   border-radius: 10px;
   max-width: 1400px;
   width: 95%;
   margin-left: auto;
   margin-right: auto;
-  height: calc(100vh - 200px);
-  min-height: 700px;
+  min-height: 600px;
   display: flex;
   flex-direction: column;
 }
@@ -307,7 +306,7 @@ nav .active {
   height: 8px;
   background: rgba(255,255,255,0.1);
   border-radius: 10px;
-  margin: 2rem 0;
+  margin: 1rem 0;
   overflow: hidden;
   flex-shrink: 0;
 }
@@ -321,63 +320,60 @@ nav .active {
 
 #question-card {
   background: rgba(255,255,255,0.05);
-  padding: 3rem;
+  padding: 2rem 1.5rem;
   border-radius: 10px;
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  overflow: hidden;
+  overflow-y: auto;
+  max-height: calc(100vh - 350px);
 }
 
 #question-text {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: #e0e0e0;
-  line-height: 1.8;
-  margin-bottom: 2rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
   flex-shrink: 0;
-  max-height: 200px;
-  overflow-y: auto;
-  padding-right: 10px;
 }
 
-/* Custom scrollbar for question text */
-#question-text::-webkit-scrollbar {
+/* Custom scrollbar for question card */
+#question-card::-webkit-scrollbar {
   width: 8px;
 }
 
-#question-text::-webkit-scrollbar-track {
+#question-card::-webkit-scrollbar-track {
   background: rgba(255,255,255,0.05);
   border-radius: 10px;
 }
 
-#question-text::-webkit-scrollbar-thumb {
+#question-card::-webkit-scrollbar-thumb {
   background: rgba(100, 255, 218, 0.3);
   border-radius: 10px;
 }
 
-#question-text::-webkit-scrollbar-thumb:hover {
+#question-card::-webkit-scrollbar-thumb:hover {
   background: rgba(100, 255, 218, 0.5);
 }
 
 .options {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  flex: 1;
-  justify-content: center;
+  gap: 1rem;
+  flex-shrink: 0;
+  margin-bottom: 1rem;
 }
 
 .options label {
   display: flex;
   align-items: center;
-  padding: 1.8rem;
+  padding: 1.5rem;
   background: rgba(255,255,255,0.03);
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s ease;
   border-left: 3px solid transparent;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .options label:hover {
@@ -387,29 +383,30 @@ nav .active {
 }
 
 .options input[type="radio"] {
-  margin-right: 1.5rem;
+  margin-right: 1rem;
   cursor: pointer;
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
 }
 
 /* NAVIGATION BUTTONS */
 .navigation {
   display: flex;
   justify-content: space-between;
-  margin-top: 2rem;
-  gap: 1.5rem;
+  margin-top: 1.5rem;
+  gap: 1rem;
   flex-shrink: 0;
 }
 
 .navigation button {
-  padding: 1.2rem 2.5rem;
+  padding: 1rem 2rem;
   border: none;
   border-radius: 5px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 #prev-btn {
@@ -869,24 +866,29 @@ footer {
   background: #101a33;
   border-radius: 10px;
 }
+
 #recommendations-text {
   line-height: 1.6;
   font-size: 15px;
   color: #e6e6e6;
 }
+
 #recommendations-text ul {
   padding-left: 25px;
   margin-top: 8px;
   margin-bottom: 16px;
 }
+
 #recommendations-text li {
   margin-bottom: 6px;
 }
+
 .principle-block {
   margin-bottom: 25px;
   border-bottom: 1px solid #20345a;
   padding-bottom: 20px;
 }
+
 .principle-block h4 {
   color: #4da3ff;
   margin-bottom: 10px;
@@ -902,18 +904,17 @@ footer {
 
 .disclaimer p {
   font-size: 14px;
-  color: #555;
+  color: #b0bec5;
   margin: 0;
   text-align: center;
 }
-
 
 /* RESPONSIVE DESIGN */
 @media screen and (max-width: 768px) {
   .navbar {
     flex-direction: column;
-    gap: 1rem;
-    padding: 1rem;
+    gap: 0.8rem;
+    padding: 0.8rem 1rem;
   }
 
   .navbar nav {
@@ -923,7 +924,8 @@ footer {
   }
 
   nav a {
-    margin: 0.5rem;
+    margin: 0.3rem 0.5rem;
+    font-size: 0.95rem;
   }
 
   .banner-text h2 {
@@ -939,11 +941,11 @@ footer {
     font-size: 0.95rem;
   }
 
-  /* Small banner responsive */
+  /* FIXED: Small banner responsive with proper spacing */
   .small-banner {
     height: 30vh;
-    min-height: 250px;
-    margin-top: 0;
+    min-height: 220px;
+    margin-top: 120px; /* Increased for mobile navbar height */
   }
 
   .small-banner-text h1 {
@@ -997,10 +999,12 @@ footer {
 
   .navigation {
     flex-direction: column;
+    gap: 0.8rem;
   }
 
   .navigation button {
     width: 100%;
+    padding: 1rem;
   }
 
   #generate-pdf,
@@ -1021,15 +1025,15 @@ footer {
     padding: 1.5rem;
   }
 
-  /* Responsive assessment sections */
+  /* FIXED: Responsive assessment sections with better spacing */
   .role-section {
     padding: 2rem 1.5rem;
   }
 
   #question-section {
-    padding: 2rem 1.5rem;
-    height: calc(100vh - 150px);
-    min-height: 600px;
+    padding: 1.5rem 1rem;
+    min-height: auto;
+    max-height: none;
     width: 98%;
   }
 
@@ -1038,25 +1042,34 @@ footer {
   }
 
   #question-card {
-    padding: 2rem 1.5rem;
+    padding: 1.5rem 1rem;
+    max-height: none;
+    overflow-y: visible;
   }
 
   #question-text {
-    font-size: 1.2rem;
-    max-height: 150px;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
   }
 
   .options {
-    gap: 1.2rem;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
   }
 
   .options label {
-    padding: 1.4rem;
-    font-size: 1.05rem;
+    padding: 1.2rem 1rem;
+    font-size: 1rem;
+  }
+
+  .options input[type="radio"] {
+    margin-right: 0.8rem;
+    width: 18px;
+    height: 18px;
   }
 
   .navigation button {
-    padding: 1rem 1.8rem;
+    padding: 1rem;
     font-size: 1rem;
   }
 }
@@ -1070,9 +1083,11 @@ footer {
     font-size: 0.9rem;
   }
 
+  /* FIXED: Extra small screens */
   .small-banner {
     height: 25vh;
     min-height: 200px;
+    margin-top: 140px; /* Even more space for very small screens */
   }
 
   .small-banner-text h1 {
@@ -1085,6 +1100,7 @@ footer {
 
   #question-text {
     font-size: 1rem;
+    line-height: 1.6;
   }
 
   .score-display p {
@@ -1102,16 +1118,31 @@ footer {
   }
 
   #question-card {
-    padding: 1.5rem 1rem;
-    height: 420px;
+    padding: 1.2rem 0.8rem;
   }
 
   #question-text {
-    font-size: 1rem;
-    height: 110px;
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .options {
+    gap: 0.8rem;
   }
 
   .options label {
-    padding: 1rem;
+    padding: 1rem 0.8rem;
+    font-size: 0.95rem;
+  }
+
+  .options input[type="radio"] {
+    margin-right: 0.7rem;
+    width: 16px;
+    height: 16px;
+  }
+
+  .navigation button {
+    padding: 0.9rem;
+    font-size: 0.95rem;
   }
 }
