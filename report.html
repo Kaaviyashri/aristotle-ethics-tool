@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reports - ARISTOTLE Ethical Readiness Tool</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="image.jpg" type="image/jpg" />
+</head>
+
+<body>
+  <!-- HEADER WITH NAVIGATION -->
+  <header class="header">
+    <div class="navbar">
+      <div class="logo-group">
+        <img src="Headings.png" alt="ARISTOTLE Logo" class="logo-logo" />
+        <h1 class="brand-text">ARISTOTLE</h1>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="assessment.html">Assessment</a>
+        <a href="report.html">Reports</a>
+        <a href="contact.html">Contact</a>
+        <a href="report.html" class="active">Reports</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- SMALL BANNER -->
+  <section class="small-banner">
+    <img src="small.png" alt="Reports Banner" class="small-banner-img" />
+    <div class="small-banner-text">
+      <h1>Assessment Reports</h1>
+      <p class="tagline">Review and download your ARISTOTLE Assessment results</p>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main class="home-container">
+    <section class="intro-section">
+      <h2>Report Overview</h2>
+      <p>
+        Each assessment you complete in ARISTOTLE can be exported as a PDF report that includes your role, responses, and summary findings.
+      </p>
+      <p>
+        After completing an assessment, use the "Generate PDF Report" button on the results page to download your comprehensive evaluation document.
+      </p>
+    </section>
+
+    <section id="report-info">
+      <h2>How to Access Your Reports</h2>
+      <div class="info-cards">
+        <div class="info-card">
+          <h3>1. Complete Assessment</h3>
+          <p>Navigate to the Assessment page and complete all questions for your selected role.</p>
+        </div>
+        <div class="info-card">
+          <h3>2. View Results</h3>
+          <p>After submitting, you'll see your ethical readiness score and recommendations.</p>
+        </div>
+        <div class="info-card">
+          <h3>3. Generate PDF</h3>
+          <p>Click "Generate PDF Report" to download a comprehensive document with all details.</p>
+        </div>
+      </div>
+      
+      <div class="cta-section">
+        <p>Ready to evaluate your AI system's ethical readiness?</p>
+        <a href="assessment.html" class="submit-button">Start New Assessment</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-wrapper">
+      <div class="footer-brand">
+        <img src="Headings.png" alt="ARISTOTLE Logo" />
+        <h3>ARISTOTLE Project 2025</h3>
+        <div class="footer-social">
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="ResearchGate"><i class="fab fa-researchgate"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="assessment.html">Assessment</a></li>
+          <li><a href="report.html">Reports</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>s.kaaviyashri@gmail.com</p>
+        <p>AI Ethics Research</p>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <p><strong>Disclaimer:</strong> This tool is an independent educational project based on publicly available WHO AI ethics guidelines. It is not officially endorsed, certified, or affiliated with the World Health Organization.</p>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 ARISTOTLE Initiative | Developed by Kaaviya Saraboji</p>
+    </div>
+  </footer>
+
+  <script>
+    // Add scroll effect to navbar
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ARISTOTLE - Ethical Readiness Tool</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="image.jpg" type="image/jpg" />
+</head>
+
+<body>
+  <!-- NAV + HEADER -->
+  <header class="header">
+    <div class="navbar">
+      <div class="logo-group">
+        <img src="Headings.png" alt="ARISTOTLE Logo" class="logo-logo" />
+        <h1 class="brand-text">ARISTOTLE</h1>
+      </div>
+      <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="assessment.html">Assessment</a>
+        <a href="report.html">Reports</a>
+        <a href="contact.html">Contact</a>
+        <a href="report.html">Reports</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- FULL IMAGE BANNER -->
+  <section class="banner">
+    <img src="image.png" alt="Healthcare AI Banner" class="banner-img" />
+    <div class="banner-text">
+      <h2>Ethical Readiness for Healthcare AI Systems</h2>
+      <p>Evaluating Alignment with WHO AI Ethics Principles</p>
+      <a href="assessment.html" class="banner-btn">Start Assessment</a>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="about">
+    <h2>About ARISTOTLE</h2>
+    <p>
+      ARISTOTLE (AI Readiness and Integrated System for Tracking Oversight, Trust, and Lawful Ethics)
+is a self-assessment and learning framework designed to help clinicians, developers, and policy leaders evaluate and strengthen the ethical trustworthiness of healthcare AI systems based on the six WHO principles:
+<strong>Autonomy, Safety, Transparency, Accountability, Fairness, and Privacy.</strong>
+    </p>
+    <p>
+      Each user receives:
+    </p>
+    <ul>
+      <li>Real-time readiness scores across ethical domains</li>
+      <li>Visual dashboards showing strengths and risks</li>
+      <li>Downloadable PDF reports for education and compliance tracking</li>
+    </ul>
+    <p>The tool promotes continuous improvement through reflection, transparency, and accountability—empowering users to build safe, fair, and responsible AI in healthcare.</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-wrapper">
+      <div class="footer-brand">
+        <img src="Headings.png" alt="ARISTOTLE Logo" />
+        <h3>ARISTOTLE 2025</h3>
+        <div class="footer-social">
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="ResearchGate"><i class="fab fa-researchgate"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="assessment.html">Assessment</a></li>
+          <li><a href="report.html">Reports</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>s.kaaviyashri@gmail.com</p>
+        <p>AI Ethics Research</p>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <p><strong>Disclaimer:</strong> This tool is an independent educational project based on publicly available WHO AI ethics guidelines. It is not officially endorsed, certified, or affiliated with the World Health Organization.</p>
+    </div>
+
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 ARISTOTLE | Developed by Kaaviya Saraboji</p>
+    </div>
+  </footer>
+
+  <script>
+    // Add scroll effect to navbar
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 100) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+</html>
